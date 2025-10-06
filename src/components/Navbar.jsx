@@ -36,8 +36,8 @@ export default function Navbar() {
             </a>
           </li>
           <li>
-            <a href="/about" className="hover:text-pink-600 transition">
-              About
+            <a href="/task" className="hover:text-pink-600 transition">
+              Task
             </a>
           </li>
           {isLoggedIn? 
