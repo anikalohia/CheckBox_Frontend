@@ -8,6 +8,7 @@ import axios from "axios";
 import LoggedHome from './components/LoggedHome';
 import { ToastContainer } from 'react-toastify';
 import Dashboard from './components/Dashboard';
+import Task from './components/Task';
 
 axios.defaults.baseURL = "http://localhost:3000";
 axios.defaults.withCredentials = true;
@@ -25,6 +26,7 @@ function App() {
         <Route path="/login" element={<Login/>}/>
         <Route path="/home" element={<LoggedHome/>}/>
         <Route path="/dashboard" element={<Dashboard/>}/>
+        <Route path="/task" element={<Task/>}/>
 
 
       </Routes>
