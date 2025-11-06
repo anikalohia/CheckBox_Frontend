@@ -37,7 +37,7 @@ export default function Login() {
 
       {/* ✅ Login Section */}
       <div className="flex justify-center items-center py-20">
-        <motion.div
+        <motion.div 
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
