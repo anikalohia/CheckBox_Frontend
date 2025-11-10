@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Navbar from "./Navbar"; // ✅ Reuse Navbar
 
+
 export default function Home() {
   return (
   <div className="min-h-screen bg-gradient-to-br from-[#DCD0A8]  to-[#FFF9E5]">
@@ -18,6 +19,7 @@ export default function Home() {
         >
           Welcome to <span className="text-[#004030]">CheckBox</span>
         </motion.h1>
+        
 
         <motion.p
           initial={{ opacity: 0 }}
@@ -25,8 +27,7 @@ export default function Home() {
           transition={{ delay: 0.4, duration: 0.7 }}
           className="mt-6 text-lg text-[#004030] max-w-2xl"
         >
-          A beautiful pink-themed app where you can create an account, log in, and
-          explore amazing features. Built with ❤️ and style.
+          The Task Manager Application is a productivity tool designed to help users efficiently organize, track, and manage their daily tasks and goals. It allows users to create, edit, prioritize, and monitor their to-do lists, improving time management and overall productivity.
         </motion.p>
 
         <motion.a
