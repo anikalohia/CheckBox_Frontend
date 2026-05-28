@@ -1,7 +1,7 @@
 import axios from 'axios';
 import {toast} from 'react-toastify'
 import { use } from 'react';
-import { createContext, useState, useEffect } from 'react';
+import { createContext, useState, useEffect, useCallback } from 'react';
 
 export const AppContext = createContext();
 
@@ -9,7 +9,7 @@ export const AppContextProvider = (props)=>{
     const [isLoggedIn , setIsLoggedIn] = useState(false);
     const [userData,setUserData] = useState(false);
 
-    const getUserData = async()=>{
+    const getUserData = useCallback(async()=>{
         try {
 
            const { data } = await axios.get('/api/user/dashboard', { withCredentials: true });
@@ -23,7 +23,7 @@ export const AppContextProvider = (props)=>{
         } catch (error) {
             toast.error(error.message)
         }
-    }
+    }, []);
     useEffect(()=>{
         getUserData();
     },[])

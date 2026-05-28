@@ -1,13 +1,13 @@
 import axios from 'axios';
 import {toast} from 'react-toastify'
-import { createContext, useState, useEffect } from 'react';
+import { createContext, useState, useEffect, useCallback } from 'react';
 
 
 export const TaskContext = createContext();
 
 export const TaskContextProvider = (props)=>{
     const [task,setTask] = useState([]);
-    const getUserTask = async()=>{
+    const getUserTask = useCallback(async()=>{
         try{
             const {data} = await axios.get('/api/task/get')
             if(data.tasks){
@@ -22,7 +22,7 @@ export const TaskContextProvider = (props)=>{
             toast.error('Failed to fetch tasks');
 
         }
-    }
+    }, []);
     useEffect(()=>{
         getUserTask()
     },[])
