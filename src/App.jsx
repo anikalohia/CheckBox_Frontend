@@ -10,7 +10,7 @@ import { ToastContainer } from 'react-toastify';
 import Dashboard from './components/Dashboard';
 import Task from './components/Task';
 
-axios.defaults.baseURL = "http://localhost:3000";
+axios.defaults.baseURL = import.meta.env.VITE_API_URL || "http://localhost:3000";
 axios.defaults.withCredentials = true;
 
 function App() {
