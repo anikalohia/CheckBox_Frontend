@@ -35,7 +35,9 @@ function Task() {
         const fetchUser = async () => {
             try {
                 const userdata = await getUserData();
-                setUser(userdata.username);
+                if (userdata) {
+                    setUser(userdata.username);
+                }
             } catch (error) {
                 console.log(error);
             }
