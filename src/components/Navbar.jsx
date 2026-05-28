@@ -56,7 +56,7 @@ export default function Navbar() {
           <div className="flex items-center gap-4">
             {isLoggedIn ? (
               <a
-                href="http://localhost:3000/api/auth/logout"
+                href={`${import.meta.env.VITE_API_URL || "http://localhost:3000"}/api/auth/logout`}
                 className="neo-btn bg-[#E06B80] text-sm"
               >
                 Logout

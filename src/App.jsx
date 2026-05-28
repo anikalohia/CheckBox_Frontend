@@ -10,7 +10,9 @@ import { ToastContainer } from 'react-toastify';
 import Dashboard from './components/Dashboard';
 import Task from './components/Task';
 
-axios.defaults.baseURL = import.meta.env.VITE_API_URL || "http://localhost:3000";
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:3000";
+console.log("Current API URL:", API_URL);
+axios.defaults.baseURL = API_URL;
 axios.defaults.withCredentials = true;
 
 function App() {
